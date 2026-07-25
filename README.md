@@ -23,8 +23,14 @@ npm run check
 
 빌드 결과인 `index.html`과 `en/index.html`도 저장소에 포함됩니다. 이 방식은 기존 GitHub Pages의 루트 정적 배포와 custom domain을 그대로 유지합니다.
 
-## 콘텐츠 검토
+## 용어 메모
 
-`src/locales/en.json`의 `TODO_CONTENT_REVIEW`에는 원문 의미 확인이 필요한 항목이 기록되어 있습니다. 현재 공개 영문 문구는 확인되지 않은 의미를 추가하지 않도록 중립적으로 작성했습니다.
+전력 케이블 분야의 `활락`은 경사지 케이블이 온도 변화에 따른 신축으로 아래쪽으로 미끄러지는 현상을 뜻합니다. 영문 페이지에서는 이를 `transmission-cable slippage assessment`로 표기합니다.
+
+검토 근거:
+
+- [한국전력 전력 용어집 — 미끄러짐(활락)](https://k-knowledge.kr/srch/read.jsp?id=268075254)
+- [대한민국 공개특허 KR20200041574A — 활락방지 케이블 받침대 및 시공방법](https://patents.google.com/patent/KR20200041574A/ko)
+- [Jicable 2015 — vertical cable slippage under thermal load cycles](https://www.jicable.org/TOUT_JICABLE/2015/2015-D3-8.pdf)
 
 `CNAME`은 `greennetpower.com`으로 유지해야 합니다.

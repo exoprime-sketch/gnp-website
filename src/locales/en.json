@@ -139,7 +139,7 @@
     "omanTag2": "International Advisory",
     "koreaMeta": "2023–2024 · Korea",
     "koreaTitle": "East Coast Transmission Constraint Advisory",
-    "koreaDescription": "Completed an East Coast transmission-constraint mitigation study (2023), an Anin Unit 2 shared-use transmission-line review (2023), and a 154 kV transmission-line technical review (2024).",
+    "koreaDescription": "Completed an East Coast transmission-constraint mitigation study (2023), an Anin Unit 2 shared-use transmission-line review (2023), and a 154 kV transmission-cable slippage assessment (2024).",
     "koreaTag1": "Transmission",
     "koreaTag2": "System Analysis",
     "mozambiqueMeta": "2015–2018 · Mozambique",
@@ -220,8 +220,5 @@
     "emailCta": "Contact Us by Email",
     "responseNote": "We will respond after reviewing the assignment.",
     "emailHref": "mailto:roundyou@hotmail.com?subject=%5BConsulting%20Inquiry%5D%20"
-  },
-  "TODO_CONTENT_REVIEW": {
-    "koreaProjectTerminology": "Confirm the intended technical meaning of the Korean source term '활락' in the 2024 154 kV transmission-line assignment. The public English copy uses the neutral phrase 'technical review' until confirmed."
   }
 }
