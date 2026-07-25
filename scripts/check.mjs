@@ -105,11 +105,15 @@ assert(
 );
 assert(
   [
-    "Rigorous Power System Studies",
-    "Utilities &amp; Grid Operators",
-    "Power System Studies, Grid Planning &amp; Markets",
-    "Clear evidence for the next decision",
-    "A clear path from technical question to recommendation",
+    "Power System Studies &amp; Engineering Consulting",
+    "Who We Work With",
+    "Utilities &amp; System Operators",
+    "Power System Studies, Transmission Planning &amp; Tariffs",
+    "Study reports and technical documentation",
+    "Study Process",
+    "Scope &amp; Data Review",
+    "System Modelling &amp; Analysis",
+    "Reporting &amp; Technical Review",
     "Development of an Ethiopian Electricity Tariff Negotiation Framework",
     "Automated &amp; Coordinated Control System for FACTS (UPFC)",
     "Professional Engineer Office",
@@ -123,8 +127,25 @@ assert(
     "commissioned technical training",
     "T&amp;D Planning",
     "shared-use transmission-line review",
+    "Rigorous Power System Studies",
+    "Confident Grid Decisions",
+    "From Grid Questions to Practical Options",
+    "Clear evidence for the next decision",
+    "A clear path from technical question to recommendation",
+    "Independent, evidence-led advice",
+    "Bring Us the Decision",
   ].some((phrase) => en.includes(phrase)),
-  "English output contains terminology retired by the industry review",
+  "English output contains terminology or marketing copy retired by the industry review",
+);
+assert(
+  ![
+    "정밀한 전력계통 해석으로",
+    "더 나은 계통 의사결정을 만듭니다",
+    "계통 현안을 실행 가능한 대안으로",
+    "독립적이고 근거 중심의 자문",
+    "검토해야 할 계통 현안을",
+  ].some((phrase) => ko.includes(phrase)),
+  "Korean output contains marketing copy retired by the industry review",
 );
 assert(
   [ko, en].every(
