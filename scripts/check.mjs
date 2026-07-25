@@ -71,6 +71,28 @@ assert(
   "Desktop/mobile navigation or language switcher is missing",
 );
 assert(
+  [ko, en].every(
+    (html) =>
+      html.includes("body.menu-open{overflow:hidden;padding-right:") &&
+      html.includes("document.body.classList.toggle(\"menu-open\", isOpen)") &&
+      html.includes('link.setAttribute("aria-current", "location")') &&
+      html.includes("target.scrollIntoView({") &&
+      html.includes('window.history.pushState(null, "", targetHash)') &&
+      !html.includes("html{scroll-behavior:smooth"),
+  ),
+  "Navigation state, controlled scrolling, or full-screen mobile menu behavior is missing",
+);
+assert(
+  [ko, en].every(
+    (html) =>
+      html.includes("requestedLanguage === currentLanguage") &&
+      html.includes("activeSectionId") &&
+      html.includes("supportedHashes.has(visibleSectionHash)") &&
+      html.includes("window.location.assign(destination.href)"),
+  ),
+  "Locale switching must avoid current-language reloads and preserve valid sections",
+);
+assert(
   ko.includes('href="tel:01034663726"') &&
     en.includes('href="tel:+821034663726"') &&
     [ko, en].every((html) =>

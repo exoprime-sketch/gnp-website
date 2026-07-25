@@ -40,7 +40,7 @@
   --max:1120px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-padding-top:76px}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
 html[lang="ko"] body{word-break:keep-all}
 html[lang="en"] body{line-height:1.65}
@@ -78,6 +78,9 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .mobile-menu{display:none}
 .nav-links a{color:var(--mist);font-size:14px;font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--white)}
+.nav-links a[aria-current="location"]{color:var(--white)}
+.nav-links a:not(.btn)[aria-current="location"]{box-shadow:inset 0 -2px var(--amber)}
+.nav-links .btn[aria-current="location"]{box-shadow:0 0 0 2px rgba(240,181,74,.58)}
 .btn{display:inline-block;font-family:var(--disp);font-weight:600;font-size:14px;padding:11px 22px;border-radius:6px;transition:transform .15s,background .15s,box-shadow .15s}
 .btn-solid{background:var(--green);color:#04120B}
 .btn-solid:hover{background:#37C983;transform:translateY(-1px)}
@@ -86,12 +89,14 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 @media(max-width:1020px){.nav-links{gap:14px}.nav-links a{font-size:13px}.nav-links .btn{padding-inline:16px}}
 @media(max-width:900px){
   .nav-links,.desktop-lang{display:none}
+  body.menu-open{overflow:hidden;padding-right:var(--menu-scrollbar-width,0)}
   .menu-toggle{display:block}
-  .mobile-menu{position:absolute;inset:64px 0 auto;background:rgba(10,22,40,.98);border-top:1px solid rgba(140,163,189,.14);border-bottom:1px solid rgba(140,163,189,.2);box-shadow:0 18px 30px rgba(3,10,20,.28)}
+  .mobile-menu{position:absolute;inset:64px 0 auto;height:calc(100vh - 64px);height:calc(100dvh - 64px);background:var(--navy);border-top:1px solid rgba(140,163,189,.14);overflow-y:auto;overscroll-behavior:contain}
   .mobile-menu[hidden]{display:none}
   .mobile-menu:not([hidden]){display:block}
-  .mobile-menu nav{display:grid;padding-top:16px;padding-bottom:22px}
+  .mobile-menu nav{display:grid;align-content:start;min-height:100%;padding-top:16px;padding-bottom:28px}
   .mobile-menu nav>a{color:var(--white);font-family:var(--disp);font-size:16px;font-weight:600;padding:12px 4px;border-bottom:1px solid rgba(140,163,189,.13)}
+  .mobile-menu nav>a[aria-current="location"]{color:var(--amber);border-bottom-color:rgba(240,181,74,.45)}
   .mobile-lang{margin-top:14px}
   .mobile-lang a{min-width:44px;min-height:44px}
 }
@@ -538,23 +543,39 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 (() => {
   const menuButton = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector("#mobile-menu");
+  const sectionIds = ["about", "services", "projects", "history", "contact"];
+  const sections = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  const sectionLinks = [...document.querySelectorAll('header a[href^="#"]')]
+    .filter((link) => sectionIds.includes(link.hash.slice(1)));
+  const supportedHashes = new Set(["#top", ...sectionIds.map((id) => `#${id}`)]);
 
   const setMenuOpen = (open) => {
     if (!menuButton || !mobileMenu) return;
-    menuButton.setAttribute("aria-expanded", String(open));
+    const isOpen = Boolean(open);
+    if (isOpen) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.setProperty(
+        "--menu-scrollbar-width",
+        `${Math.max(0, scrollbarWidth)}px`,
+      );
+    }
+    menuButton.setAttribute("aria-expanded", String(isOpen));
     menuButton.setAttribute(
       "aria-label",
-      open ? menuButton.dataset.closeLabel : menuButton.dataset.openLabel,
+      isOpen ? menuButton.dataset.closeLabel : menuButton.dataset.openLabel,
     );
-    mobileMenu.hidden = !open;
+    mobileMenu.hidden = !isOpen;
+    document.body.classList.toggle("menu-open", isOpen);
+    if (!isOpen) {
+      document.body.style.removeProperty("--menu-scrollbar-width");
+    }
   };
 
   menuButton?.addEventListener("click", () => {
     setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
-  });
-
-  mobileMenu?.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", () => setMenuOpen(false));
   });
 
   document.addEventListener("keydown", (event) => {
@@ -568,18 +589,91 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     if (window.innerWidth > 900) setMenuOpen(false);
   });
 
+  let activeNavigationFrame;
+  let activeSectionId = "";
+  const updateActiveNavigation = () => {
+    activeNavigationFrame = undefined;
+    const marker = 96;
+    const isPageBottom =
+      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    let activeId = "";
+
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= marker) activeId = section.id;
+    }
+    if (isPageBottom && sections.length) activeId = sections.at(-1).id;
+    activeSectionId = activeId;
+
+    sectionLinks.forEach((link) => {
+      if (link.hash === `#${activeId}`) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const requestNavigationUpdate = () => {
+    if (activeNavigationFrame) return;
+    activeNavigationFrame = requestAnimationFrame(updateActiveNavigation);
+  };
+
+  window.addEventListener("scroll", requestNavigationUpdate, { passive: true });
+  window.addEventListener("hashchange", requestNavigationUpdate);
+  window.addEventListener("popstate", requestNavigationUpdate);
+  window.addEventListener("pageshow", () => {
+    setMenuOpen(false);
+    requestNavigationUpdate();
+  });
+  requestNavigationUpdate();
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetHash = link.hash || "#top";
+      if (!supportedHashes.has(targetHash)) return;
+
+      const target = document.getElementById(targetHash.slice(1));
+      if (!target) return;
+
+      event.preventDefault();
+      setMenuOpen(false);
+      target.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      });
+      if (window.location.hash !== targetHash) {
+        window.history.pushState(null, "", targetHash);
+      }
+    });
+  });
+
   document.querySelectorAll(".lang-link").forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
+      const requestedLanguage = link.dataset.lang;
+      const currentLanguage = document.documentElement.lang.split("-")[0];
+
       try {
-        localStorage.setItem("gnp-language", link.dataset.lang);
+        localStorage.setItem("gnp-language", requestedLanguage);
       } catch {
         // Language switching still works when storage is unavailable.
       }
-      if (window.location.hash) {
-        const destination = new URL(link.href, window.location.href);
-        destination.hash = window.location.hash;
-        link.href = destination.href;
+
+      setMenuOpen(false);
+      event.preventDefault();
+      if (requestedLanguage === currentLanguage) return;
+
+      const destination = new URL(link.getAttribute("href"), window.location.href);
+      const visibleSectionHash = activeSectionId
+        ? `#${activeSectionId}`
+        : window.location.hash === "#top"
+          ? "#top"
+          : "";
+      if (supportedHashes.has(visibleSectionHash)) {
+        destination.hash = visibleSectionHash;
       }
+      window.location.assign(destination.href);
     });
   });
 })();
