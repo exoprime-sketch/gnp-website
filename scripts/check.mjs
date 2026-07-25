@@ -71,12 +71,32 @@ assert(
   "Desktop/mobile navigation or language switcher is missing",
 );
 assert(
-  [ko, en].every(
-    (html) =>
-      html.includes('href="tel:01034663726"') &&
+  ko.includes('href="tel:01034663726"') &&
+    en.includes('href="tel:+821034663726"') &&
+    [ko, en].every((html) =>
       html.includes('href="mailto:roundyou@hotmail.com"'),
-  ),
+    ),
   "Phone or email contact link is missing",
+);
+assert(
+  [
+    "power flow, short-circuit, and transient stability studies",
+    "Power System Studies, Grid Planning &amp; Markets",
+    "Development of an Ethiopian Electricity Tariff Negotiation Framework",
+    "coordinated control system for FACTS devices",
+    "Registered Professional Engineer Office",
+  ].every((phrase) => en.includes(phrase)),
+  "English output is missing reviewed industry terminology",
+);
+assert(
+  ![
+    "FACTS coordinated-control system",
+    "national grid advisory programs",
+    "commissioned technical training",
+    "T&amp;D Planning",
+    "shared-use transmission-line review",
+  ].some((phrase) => en.includes(phrase)),
+  "English output contains terminology retired by the industry review",
 );
 assert(
   notFound.includes("Green Net Power") && /[가-힣]/u.test(notFound),

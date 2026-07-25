@@ -33,4 +33,14 @@ npm run check
 - [대한민국 공개특허 KR20200041574A — 활락방지 케이블 받침대 및 시공방법](https://patents.google.com/patent/KR20200041574A/ko)
 - [Jicable 2015 — vertical cable slippage under thermal load cycles](https://www.jicable.org/TOUT_JICABLE/2015/2015-D3-8.pdf)
 
+영문 기술 용어는 다음 공식·업계 자료의 표현을 기준으로 관리합니다.
+
+- [IEEE 3002 시리즈 — load-flow 및 short-circuit studies](https://standards.ieee.org/ieee/3006.2/5823/)
+- [CIGRE Green Book — FACTS controllers, planning, integration, commissioning 및 operation](https://electra.cigre.org/313-december-2020/life-of-association/journey-of-a-cigre-green-book-flexible-ac-transmission-systems.html)
+- [DNV — power system planning, grid modelling, interconnection 및 reinforcement studies](https://www.dnv.com/services/power-grids/power-system-planning/)
+- [ADB — microgrid feasibility and power quality](https://www.adb.org/documents/handbook-microgrids-power-quality-connectivity)
+- [KSP — Development of an Ethiopian Electricity Tariff Negotiation Framework](https://www.ksp.go.kr/english/pageView/info-eng/1064)
+- [KOITA — Corporate R&D Center 공식 표기](https://www.koita.or.kr/eng/conts/101002000000000.do)
+- [대한민국 기술사법 영문본 — professional engineer office](https://www.law.go.kr/lsInfoP.do?chrClsCd=010202&lsId=000755&lsiSeq=176672&urlMode=engLsInfoR&viewCls=engLsInfoR)
+
 `CNAME`은 `greennetpower.com`으로 유지해야 합니다.

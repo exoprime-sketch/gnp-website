@@ -213,6 +213,7 @@
     "address": "대전광역시 유성구 문지로 272-16, AI센터 409호",
     "phoneLabel": "PHONE",
     "phone": "010-3466-3726",
+    "phoneHref": "tel:01034663726",
     "emailLabel": "EMAIL",
     "email": "roundyou@hotmail.com",
     "boxTitle": "컨설팅 문의",
