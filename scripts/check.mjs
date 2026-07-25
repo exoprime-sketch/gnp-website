@@ -66,9 +66,12 @@ assert(
     (html) =>
       html.includes('class="menu-toggle"') &&
       html.includes('class="mobile-menu"') &&
-      html.includes('class="lang-switch'),
+      html.includes('class="lang-switch') &&
+      html.includes('class="skip-link"') &&
+      html.includes('id="audience"') &&
+      html.includes('id="approach"'),
   ),
-  "Desktop/mobile navigation or language switcher is missing",
+  "Navigation, language switching, accessibility, or client journey sections are missing",
 );
 assert(
   [ko, en].every(
@@ -102,11 +105,14 @@ assert(
 );
 assert(
   [
-    "power flow, short-circuit, and transient stability studies",
+    "Rigorous Power System Studies",
+    "Utilities &amp; Grid Operators",
     "Power System Studies, Grid Planning &amp; Markets",
+    "Clear evidence for the next decision",
+    "A clear path from technical question to recommendation",
     "Development of an Ethiopian Electricity Tariff Negotiation Framework",
-    "coordinated control system for FACTS devices",
-    "Registered Professional Engineer Office",
+    "Automated &amp; Coordinated Control System for FACTS (UPFC)",
+    "Professional Engineer Office",
   ].every((phrase) => en.includes(phrase)),
   "English output is missing reviewed industry terminology",
 );
@@ -120,6 +126,41 @@ assert(
   ].some((phrase) => en.includes(phrase)),
   "English output contains terminology retired by the industry review",
 );
+assert(
+  [ko, en].every(
+    (html) =>
+      html.includes('<script type="application/ld+json">') &&
+      html.includes('"@type": "ProfessionalService"') &&
+      html.includes("target.focus({ preventScroll: true })") &&
+      html.includes('activeId === "approach" ? "services" : activeId'),
+  ),
+  "Structured data, skip-link focus, or approach navigation mapping is missing",
+);
+
+for (const [locale, html] of [
+  ["ko", ko],
+  ["en", en],
+]) {
+  const structuredData = html.match(
+    /<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/,
+  );
+  try {
+    JSON.parse(structuredData?.[1] ?? "");
+  } catch {
+    failures.push(`${locale} JSON-LD must be valid JSON`);
+  }
+
+  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
+  const missingAnchorTargets = [
+    ...html.matchAll(/href="#([^"]+)"/g),
+  ]
+    .map((match) => match[1])
+    .filter((target) => !ids.has(target));
+  assert(
+    missingAnchorTargets.length === 0,
+    `${locale} page contains links to missing section IDs: ${missingAnchorTargets.join(", ")}`,
+  );
+}
 assert(
   notFound.includes("Green Net Power") && /[가-힣]/u.test(notFound),
   "404 page must provide both Korean and English guidance",

@@ -23,6 +23,38 @@
 <meta name="twitter:description" content="{{seo.ogDescription}}">
 <meta name="twitter:image" content="https://greennetpower.com/assets/og-image.jpg">
 <meta name="theme-color" content="#0A1628">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Green Net Power Co., Ltd.",
+  "url": "https://greennetpower.com/",
+  "foundingDate": "2004",
+  "telephone": "+82-10-3466-3726",
+  "email": "roundyou@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 409, AI Center, 272-16 Munji-ro",
+    "addressLocality": "Yuseong-gu, Daejeon",
+    "addressCountry": "KR"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "project inquiries",
+    "telephone": "+82-10-3466-3726",
+    "email": "roundyou@hotmail.com",
+    "availableLanguage": ["Korean", "English"]
+  },
+  "knowsAbout": [
+    "Power system studies",
+    "Transmission planning",
+    "Renewable energy grid integration",
+    "Microgrid design",
+    "Power quality engineering",
+    "Electricity tariff advisory"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%232BB673' stroke-width='3'/%3E%3Cpath d='M17.5 7 11 18h4.5L14 25l7-11h-4.5z' fill='%232BB673'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +80,8 @@ html[lang="en"] body{line-height:1.65}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.skip-link{position:fixed;z-index:100;left:16px;top:12px;background:var(--white);color:var(--navy);font-weight:700;padding:10px 14px;border-radius:6px;transform:translateY(-150%);transition:transform .15s}
+.skip-link:focus{transform:translateY(0)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:500}
 .sec-head{margin-bottom:44px}
@@ -108,8 +142,12 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .hero-in{position:relative;max-width:var(--max);margin:0 auto;padding:0 24px 84px}
 .hero .eyebrow{color:var(--amber)}
 .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(32px,5vw,54px);line-height:1.25;letter-spacing:-.015em;margin:18px 0 20px;max-width:22ch}
+html[lang="en"] .hero h1{max-width:28ch}
 .hero p{color:#B9C9DC;max-width:56ch;font-size:clamp(15px,1.6vw,17.5px)}
 .hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:28px;color:#9EB1C7;font-size:12.5px}
+.hero-trust span{display:flex;align-items:center;gap:8px}
+.hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(240,181,74,.11)}
 .oneline{position:relative;display:block;width:100%;height:64px;color:var(--line)}
 .oneline .flow{stroke:var(--green);stroke-dasharray:7 12;animation:flow 2.6s linear infinite;opacity:.9}
 @keyframes flow{to{stroke-dashoffset:-38}}
@@ -118,16 +156,35 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .stats{background:var(--paper);border-bottom:1px solid #E1E9F2}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E1E9F2;border-inline:1px solid #E1E9F2}
 .stat{background:var(--paper);padding:34px 26px}
-.stat b{font-family:var(--mono);font-weight:500;font-size:clamp(22px,2.6vw,30px);color:var(--green-deep);display:block;letter-spacing:-.02em}
+.stat b{font-family:var(--mono);font-weight:500;font-size:clamp(21px,2.4vw,28px);color:var(--green-deep);display:block;letter-spacing:-.02em}
 .stat span{font-size:13.5px;color:var(--ink-soft);display:block;margin-top:8px;line-height:1.55}
+.stat:last-child b{font-size:clamp(19px,2.1vw,25px);line-height:1.35}
 @media(max-width:860px){.stats-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
+
+/* audience */
+.audience{background:var(--card);border-bottom:1px solid #E1E9F2;padding:72px 0}
+.audience-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:end;margin-bottom:34px}
+.audience-head h2{font-family:var(--disp);font-size:clamp(24px,3vw,34px);line-height:1.3;margin-top:10px}
+.audience-head p{color:var(--ink-soft);max-width:56ch}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #DDE6F0;border-radius:12px;overflow:hidden}
+.audience-card{padding:28px 24px;min-height:180px;background:linear-gradient(180deg,#fff,#FAFCFE)}
+.audience-card+.audience-card{border-left:1px solid #DDE6F0}
+.audience-card svg{color:var(--green-deep);margin-bottom:22px}
+.audience-card h3{font-family:var(--disp);font-size:16px;line-height:1.4;margin-bottom:9px}
+.audience-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+@media(max-width:900px){.audience-grid{grid-template-columns:1fr 1fr}.audience-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.audience-card:nth-child(4){border-top:1px solid #DDE6F0}}
+@media(max-width:700px){.audience-head{grid-template-columns:1fr;gap:16px}}
+@media(max-width:480px){.audience{padding:56px 0}.audience-grid{grid-template-columns:1fr}.audience-card{min-height:0}.audience-card+.audience-card,.audience-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
 .about p+p{margin-top:16px}
 .about .lead{font-size:18px;font-weight:600;font-family:var(--disp);line-height:1.65}
 .about p{color:var(--ink-soft)}
+.about-principle{margin-top:26px;padding:22px 24px;border-left:3px solid var(--green);background:#EDF5F1;border-radius:0 8px 8px 0}
+.about-principle b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);margin-bottom:8px}
+.about-principle p{color:var(--ink);margin:0;font-size:14.5px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{font-family:var(--mono);font-size:12.5px;padding:9px 14px;border:1px solid #CFDCEA;border-radius:999px;background:var(--card);color:var(--ink-soft)}
 .chip b{color:var(--green-deep);font-weight:500}
@@ -137,6 +194,8 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 
 /* services */
 .svc{background:#EBF1F8}
+.svc .sec-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:end}
+.svc-intro{color:var(--ink-soft);max-width:58ch;padding-bottom:3px}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .svc-card{background:var(--card);border:1px solid #E1E9F2;border-radius:10px;padding:32px 30px;transition:transform .18s,box-shadow .18s}
 .svc-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -18px rgba(16,31,53,.35)}
@@ -146,7 +205,31 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .svc-card ul{margin-top:14px;list-style:none}
 .svc-card li{font-size:13.5px;color:var(--ink-soft);padding:5px 0 5px 18px;position:relative}
 .svc-card li::before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;border:1.5px solid var(--green);border-radius:50%}
+.deliverables{margin-top:22px;background:var(--navy);color:var(--white);border-radius:10px;padding:26px 28px;display:grid;grid-template-columns:.8fr 1.35fr auto;gap:28px;align-items:center}
+.deliverables .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px}
+.deliverables h3{font-family:var(--disp);font-size:17px}
+.deliverables p{font-size:13.5px;color:#B9C9DC;line-height:1.65}
+.deliverables a{white-space:nowrap;color:var(--white);font-family:var(--disp);font-size:13px;font-weight:700;padding:10px 14px;border:1px solid var(--line);border-radius:6px}
+.deliverables a:hover{border-color:var(--green);color:#79D6A6}
 @media(max-width:800px){.svc-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.svc .sec-head{grid-template-columns:1fr;gap:14px}.deliverables{grid-template-columns:1fr;gap:16px}.deliverables a{justify-self:start}}
+
+/* approach */
+.approach{background:var(--card)}
+.approach .sec-head{max-width:760px}
+.approach-intro{color:var(--ink-soft);margin-top:14px;max-width:62ch}
+.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #DDE6F0;border-radius:12px;overflow:hidden}
+.approach-card{padding:30px 24px 28px;background:#fff}
+.approach-card+.approach-card{border-left:1px solid #DDE6F0}
+.approach-card .step{font-family:var(--mono);font-size:12px;color:var(--green-deep);letter-spacing:.12em;display:block;margin-bottom:32px}
+.approach-card h3{font-family:var(--disp);font-size:17px;margin-bottom:10px}
+.approach-card p{font-size:13.5px;color:var(--ink-soft)}
+.approach-principle{margin-top:22px;border-radius:10px;background:linear-gradient(110deg,var(--navy),#122B49);color:var(--white);padding:26px 30px;display:flex;align-items:center;gap:28px}
+.approach-principle svg{flex:none;color:var(--green)}
+.approach-principle strong{font-family:var(--disp);font-size:17px;display:block;margin-bottom:4px}
+.approach-principle p{color:#B9C9DC;font-size:13.5px}
+@media(max-width:900px){.approach-grid{grid-template-columns:1fr 1fr}.approach-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.approach-card:nth-child(4){border-top:1px solid #DDE6F0}}
+@media(max-width:560px){.approach-grid{grid-template-columns:1fr}.approach-card+.approach-card,.approach-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.approach-card .step{margin-bottom:20px}.approach-principle{align-items:flex-start;padding:24px 22px}}
 
 /* projects */
 .proj{background:var(--navy);color:var(--white)}
@@ -198,23 +281,35 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .c-box{background:var(--panel);border:1px solid rgba(140,163,189,.16);border-radius:12px;padding:34px}
 .c-box h3{font-family:var(--disp);font-size:18px;margin-bottom:10px}
 .c-box p{font-size:14px;color:var(--mist);margin-bottom:24px}
+.brief-list{list-style:none;display:grid;gap:10px;margin:-6px 0 24px}
+.brief-list li{font-size:13.5px;color:#C8D5E4;display:flex;gap:10px;align-items:flex-start}
+.brief-list li::before{content:"✓";color:var(--green);font-weight:700}
 .c-box .btn{width:100%;text-align:center}
 .c-box small{display:block;margin-top:14px;font-size:12px;color:var(--mist);text-align:center}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:40px}}
 
-footer{background:#081120;color:var(--mist);padding:30px 0;font-size:12.5px}
-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C9DC}
+footer{background:#081120;color:var(--mist);padding:44px 0 26px;font-size:12.5px}
+.footer-main{display:flex;justify-content:space-between;gap:40px;padding-bottom:30px;border-bottom:1px solid rgba(140,163,189,.13)}
+.footer-brand b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C9DC;display:block}
+.footer-brand p{max-width:52ch;margin-top:9px;color:#7E93AA}
+.footer-links{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;font-weight:600;color:#AEBED0}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:24px}
+.back-top{color:#AEBED0}
+.back-top:hover{color:var(--green)}
 
 @media(max-width:480px){
   .wrap,.hero-in{padding-left:18px;padding-right:18px}
   .hero{padding-top:136px}
   .hero-in{padding-bottom:64px}
   .hero-cta .btn{width:100%;text-align:center}
+  .hero-trust{display:grid;gap:9px}
   .sec{padding:72px 0}
   .sec-head{margin-bottom:34px}
   .svc-card,.c-box{padding:26px 22px}
-  footer .wrap{display:grid}
+  .footer-main{display:grid;gap:24px}
+  .footer-links{display:grid;grid-template-columns:1fr 1fr}
+  .footer-bottom{display:grid}
 }
 @media(max-width:350px){
   .brand{gap:8px}
@@ -229,6 +324,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 </style>
 </head>
 <body>
+<a class="skip-link" href="#top">{{accessibility.skipToContent}}</a>
 
 <header>
   <div class="wrap nav">
@@ -270,7 +366,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <section class="hero">
   <div class="hero-bg" role="img" aria-label="{{hero.imageAlt}}"></div>
   <div class="hero-shade"></div>
@@ -281,6 +377,11 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     <div class="hero-cta">
       <a class="btn btn-solid" href="#contact">{{hero.contactCta}}</a>
       <a class="btn btn-line" href="#projects">{{hero.projectsCta}}</a>
+    </div>
+    <div class="hero-trust" aria-label="{{hero.trustLabel}}">
+      <span>{{hero.trust1}}</span>
+      <span>{{hero.trust2}}</span>
+      <span>{{hero.trust3}}</span>
     </div>
   </div>
   <svg class="oneline" viewBox="0 0 1200 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -312,6 +413,40 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
   </div>
 </section>
 
+<section class="audience" id="audience" aria-labelledby="audience-title">
+  <div class="wrap">
+    <div class="audience-head">
+      <div>
+        <span class="eyebrow">{{audience.eyebrow}}</span>
+        <h2 id="audience-title">{{audience.title}}</h2>
+      </div>
+      <p>{{audience.intro}}</p>
+    </div>
+    <div class="audience-grid">
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="m7 11 10-5M7 13l10 5"/></svg>
+        <h3>{{audience.utilitiesTitle}}</h3>
+        <p>{{audience.utilitiesDescription}}</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V10h14v11M3 10h18L12 3zM9 14v3M15 14v3"/></svg>
+        <h3>{{audience.governmentTitle}}</h3>
+        <p>{{audience.governmentDescription}}</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M3 11h18M9 14h6"/></svg>
+        <h3>{{audience.developersTitle}}</h3>
+        <p>{{audience.developersDescription}}</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+        <h3>{{audience.partnersTitle}}</h3>
+        <p>{{audience.partnersDescription}}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="sec about" id="about">
   <div class="wrap">
     <div class="sec-head">
@@ -322,7 +457,10 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
       <div>
         <p class="lead">{{about.lead}}</p>
         <p>{{about.history}}</p>
-        <p>{{about.principle}}</p>
+        <div class="about-principle">
+          <b>{{about.principleLabel}}</b>
+          <p>{{about.principle}}</p>
+        </div>
       </div>
       <div class="side-note">
         <h3>{{about.capabilities}}</h3>
@@ -345,8 +483,11 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 <section class="sec svc" id="services">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">{{services.eyebrow}}</span>
-      <h2>{{services.title}}</h2>
+      <div>
+        <span class="eyebrow">{{services.eyebrow}}</span>
+        <h2>{{services.title}}</h2>
+      </div>
+      <p class="svc-intro">{{services.intro}}</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card">
@@ -389,6 +530,53 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
           <li>{{services.trainingItem2}}</li>
           <li>{{services.trainingItem3}}</li>
         </ul>
+      </div>
+    </div>
+    <div class="deliverables">
+      <div>
+        <span class="label">{{services.deliverablesLabel}}</span>
+        <h3>{{services.deliverablesTitle}}</h3>
+      </div>
+      <p>{{services.deliverablesDescription}}</p>
+      <a href="#contact">{{services.deliverablesCta}} →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec approach" id="approach" aria-labelledby="approach-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">{{approach.eyebrow}}</span>
+      <h2 id="approach-title">{{approach.title}}</h2>
+      <p class="approach-intro">{{approach.intro}}</p>
+    </div>
+    <div class="approach-grid">
+      <article class="approach-card">
+        <span class="step">01</span>
+        <h3>{{approach.step1Title}}</h3>
+        <p>{{approach.step1Description}}</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">02</span>
+        <h3>{{approach.step2Title}}</h3>
+        <p>{{approach.step2Description}}</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">03</span>
+        <h3>{{approach.step3Title}}</h3>
+        <p>{{approach.step3Description}}</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">04</span>
+        <h3>{{approach.step4Title}}</h3>
+        <p>{{approach.step4Description}}</p>
+      </article>
+    </div>
+    <div class="approach-principle">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+      <div>
+        <strong>{{approach.principleTitle}}</strong>
+        <p>{{approach.principleDescription}}</p>
       </div>
     </div>
   </div>
@@ -525,6 +713,11 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     <div class="c-box">
       <h3>{{contact.boxTitle}}</h3>
       <p>{{contact.boxDescription}}</p>
+      <ul class="brief-list">
+        <li>{{contact.brief1}}</li>
+        <li>{{contact.brief2}}</li>
+        <li>{{contact.brief3}}</li>
+      </ul>
       <a class="btn btn-solid" href="{{contact.emailHref}}">{{contact.emailCta}}</a>
       <small>{{contact.responseNote}}</small>
     </div>
@@ -534,8 +727,23 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 
 <footer>
   <div class="wrap">
-    <span><b>{{brand.footerName}}</b></span>
-    <span>{{brand.copyright}}</span>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <b>{{brand.footerName}}</b>
+        <p>{{footer.tagline}}</p>
+      </div>
+      <nav class="footer-links" aria-label="{{nav.label}}">
+        <a href="#about">{{nav.about}}</a>
+        <a href="#services">{{nav.services}}</a>
+        <a href="#projects">{{nav.projects}}</a>
+        <a href="#history">{{nav.history}}</a>
+        <a href="#contact">{{nav.contact}}</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>{{brand.copyright}}</span>
+      <a class="back-top" href="#top">{{footer.backToTop}} ↑</a>
+    </div>
   </div>
 </footer>
 
@@ -543,12 +751,21 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 (() => {
   const menuButton = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector("#mobile-menu");
-  const sectionIds = ["about", "services", "projects", "history", "contact"];
+  const sectionIds = [
+    "audience",
+    "about",
+    "services",
+    "approach",
+    "projects",
+    "history",
+    "contact",
+  ];
+  const navigationIds = ["about", "services", "projects", "history", "contact"];
   const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const sectionLinks = [...document.querySelectorAll('header a[href^="#"]')]
-    .filter((link) => sectionIds.includes(link.hash.slice(1)));
+    .filter((link) => navigationIds.includes(link.hash.slice(1)));
   const supportedHashes = new Set(["#top", ...sectionIds.map((id) => `#${id}`)]);
 
   const setMenuOpen = (open) => {
@@ -603,9 +820,10 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     }
     if (isPageBottom && sections.length) activeId = sections.at(-1).id;
     activeSectionId = activeId;
+    const navigationId = activeId === "approach" ? "services" : activeId;
 
     sectionLinks.forEach((link) => {
-      if (link.hash === `#${activeId}`) {
+      if (link.hash === `#${navigationId}`) {
         link.setAttribute("aria-current", "location");
       } else {
         link.removeAttribute("aria-current");
@@ -645,6 +863,9 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
       });
       if (window.location.hash !== targetHash) {
         window.history.pushState(null, "", targetHash);
+      }
+      if (link.classList.contains("skip-link")) {
+        target.focus({ preventScroll: true });
       }
     });
   });

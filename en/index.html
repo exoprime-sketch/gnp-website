@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Net Power | Power Systems &amp; Renewable Energy Consulting</title>
-<meta name="description" content="Independent power systems consultancy established in 2004, providing power system studies, transmission planning, renewable integration, microgrid, power quality, and electricity tariff advisory services.">
-<meta property="og:title" content="Green Net Power | Power Systems Engineering &amp; Advisory">
-<meta property="og:description" content="Independent engineering advisory for power system studies, transmission planning, renewable integration, microgrids, power quality, and electricity tariffs.">
+<title>Green Net Power | Independent Power Systems Engineering &amp; Advisory</title>
+<meta name="description" content="Independent consultancy for power system studies, transmission planning, renewable integration, microgrids, power quality, and electricity tariff advisory.">
+<meta property="og:title" content="Green Net Power | Independent Power Systems Engineering">
+<meta property="og:description" content="Rigorous power system studies and practical engineering advice for confident grid, renewable energy, and infrastructure decisions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://greennetpower.com/en/">
 <link rel="canonical" href="https://greennetpower.com/en/">
@@ -19,10 +19,42 @@
 <meta property="og:image" content="https://greennetpower.com/assets/og-image.jpg">
 <meta property="og:image:alt" content="Green Net Power power systems consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Green Net Power | Power Systems Engineering &amp; Advisory">
-<meta name="twitter:description" content="Independent engineering advisory for power system studies, transmission planning, renewable integration, microgrids, power quality, and electricity tariffs.">
+<meta name="twitter:title" content="Green Net Power | Independent Power Systems Engineering">
+<meta name="twitter:description" content="Rigorous power system studies and practical engineering advice for confident grid, renewable energy, and infrastructure decisions.">
 <meta name="twitter:image" content="https://greennetpower.com/assets/og-image.jpg">
 <meta name="theme-color" content="#0A1628">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Green Net Power Co., Ltd.",
+  "url": "https://greennetpower.com/",
+  "foundingDate": "2004",
+  "telephone": "+82-10-3466-3726",
+  "email": "roundyou@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 409, AI Center, 272-16 Munji-ro",
+    "addressLocality": "Yuseong-gu, Daejeon",
+    "addressCountry": "KR"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "project inquiries",
+    "telephone": "+82-10-3466-3726",
+    "email": "roundyou@hotmail.com",
+    "availableLanguage": ["Korean", "English"]
+  },
+  "knowsAbout": [
+    "Power system studies",
+    "Transmission planning",
+    "Renewable energy grid integration",
+    "Microgrid design",
+    "Power quality engineering",
+    "Electricity tariff advisory"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%232BB673' stroke-width='3'/%3E%3Cpath d='M17.5 7 11 18h4.5L14 25l7-11h-4.5z' fill='%232BB673'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +80,8 @@ html[lang="en"] body{line-height:1.65}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.skip-link{position:fixed;z-index:100;left:16px;top:12px;background:var(--white);color:var(--navy);font-weight:700;padding:10px 14px;border-radius:6px;transform:translateY(-150%);transition:transform .15s}
+.skip-link:focus{transform:translateY(0)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:500}
 .sec-head{margin-bottom:44px}
@@ -108,8 +142,12 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .hero-in{position:relative;max-width:var(--max);margin:0 auto;padding:0 24px 84px}
 .hero .eyebrow{color:var(--amber)}
 .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(32px,5vw,54px);line-height:1.25;letter-spacing:-.015em;margin:18px 0 20px;max-width:22ch}
+html[lang="en"] .hero h1{max-width:28ch}
 .hero p{color:#B9C9DC;max-width:56ch;font-size:clamp(15px,1.6vw,17.5px)}
 .hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:28px;color:#9EB1C7;font-size:12.5px}
+.hero-trust span{display:flex;align-items:center;gap:8px}
+.hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(240,181,74,.11)}
 .oneline{position:relative;display:block;width:100%;height:64px;color:var(--line)}
 .oneline .flow{stroke:var(--green);stroke-dasharray:7 12;animation:flow 2.6s linear infinite;opacity:.9}
 @keyframes flow{to{stroke-dashoffset:-38}}
@@ -118,16 +156,35 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .stats{background:var(--paper);border-bottom:1px solid #E1E9F2}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E1E9F2;border-inline:1px solid #E1E9F2}
 .stat{background:var(--paper);padding:34px 26px}
-.stat b{font-family:var(--mono);font-weight:500;font-size:clamp(22px,2.6vw,30px);color:var(--green-deep);display:block;letter-spacing:-.02em}
+.stat b{font-family:var(--mono);font-weight:500;font-size:clamp(21px,2.4vw,28px);color:var(--green-deep);display:block;letter-spacing:-.02em}
 .stat span{font-size:13.5px;color:var(--ink-soft);display:block;margin-top:8px;line-height:1.55}
+.stat:last-child b{font-size:clamp(19px,2.1vw,25px);line-height:1.35}
 @media(max-width:860px){.stats-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
+
+/* audience */
+.audience{background:var(--card);border-bottom:1px solid #E1E9F2;padding:72px 0}
+.audience-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:end;margin-bottom:34px}
+.audience-head h2{font-family:var(--disp);font-size:clamp(24px,3vw,34px);line-height:1.3;margin-top:10px}
+.audience-head p{color:var(--ink-soft);max-width:56ch}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #DDE6F0;border-radius:12px;overflow:hidden}
+.audience-card{padding:28px 24px;min-height:180px;background:linear-gradient(180deg,#fff,#FAFCFE)}
+.audience-card+.audience-card{border-left:1px solid #DDE6F0}
+.audience-card svg{color:var(--green-deep);margin-bottom:22px}
+.audience-card h3{font-family:var(--disp);font-size:16px;line-height:1.4;margin-bottom:9px}
+.audience-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+@media(max-width:900px){.audience-grid{grid-template-columns:1fr 1fr}.audience-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.audience-card:nth-child(4){border-top:1px solid #DDE6F0}}
+@media(max-width:700px){.audience-head{grid-template-columns:1fr;gap:16px}}
+@media(max-width:480px){.audience{padding:56px 0}.audience-grid{grid-template-columns:1fr}.audience-card{min-height:0}.audience-card+.audience-card,.audience-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
 .about p+p{margin-top:16px}
 .about .lead{font-size:18px;font-weight:600;font-family:var(--disp);line-height:1.65}
 .about p{color:var(--ink-soft)}
+.about-principle{margin-top:26px;padding:22px 24px;border-left:3px solid var(--green);background:#EDF5F1;border-radius:0 8px 8px 0}
+.about-principle b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);margin-bottom:8px}
+.about-principle p{color:var(--ink);margin:0;font-size:14.5px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{font-family:var(--mono);font-size:12.5px;padding:9px 14px;border:1px solid #CFDCEA;border-radius:999px;background:var(--card);color:var(--ink-soft)}
 .chip b{color:var(--green-deep);font-weight:500}
@@ -137,6 +194,8 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 
 /* services */
 .svc{background:#EBF1F8}
+.svc .sec-head{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:end}
+.svc-intro{color:var(--ink-soft);max-width:58ch;padding-bottom:3px}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .svc-card{background:var(--card);border:1px solid #E1E9F2;border-radius:10px;padding:32px 30px;transition:transform .18s,box-shadow .18s}
 .svc-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -18px rgba(16,31,53,.35)}
@@ -146,7 +205,31 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .svc-card ul{margin-top:14px;list-style:none}
 .svc-card li{font-size:13.5px;color:var(--ink-soft);padding:5px 0 5px 18px;position:relative}
 .svc-card li::before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;border:1.5px solid var(--green);border-radius:50%}
+.deliverables{margin-top:22px;background:var(--navy);color:var(--white);border-radius:10px;padding:26px 28px;display:grid;grid-template-columns:.8fr 1.35fr auto;gap:28px;align-items:center}
+.deliverables .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px}
+.deliverables h3{font-family:var(--disp);font-size:17px}
+.deliverables p{font-size:13.5px;color:#B9C9DC;line-height:1.65}
+.deliverables a{white-space:nowrap;color:var(--white);font-family:var(--disp);font-size:13px;font-weight:700;padding:10px 14px;border:1px solid var(--line);border-radius:6px}
+.deliverables a:hover{border-color:var(--green);color:#79D6A6}
 @media(max-width:800px){.svc-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.svc .sec-head{grid-template-columns:1fr;gap:14px}.deliverables{grid-template-columns:1fr;gap:16px}.deliverables a{justify-self:start}}
+
+/* approach */
+.approach{background:var(--card)}
+.approach .sec-head{max-width:760px}
+.approach-intro{color:var(--ink-soft);margin-top:14px;max-width:62ch}
+.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #DDE6F0;border-radius:12px;overflow:hidden}
+.approach-card{padding:30px 24px 28px;background:#fff}
+.approach-card+.approach-card{border-left:1px solid #DDE6F0}
+.approach-card .step{font-family:var(--mono);font-size:12px;color:var(--green-deep);letter-spacing:.12em;display:block;margin-bottom:32px}
+.approach-card h3{font-family:var(--disp);font-size:17px;margin-bottom:10px}
+.approach-card p{font-size:13.5px;color:var(--ink-soft)}
+.approach-principle{margin-top:22px;border-radius:10px;background:linear-gradient(110deg,var(--navy),#122B49);color:var(--white);padding:26px 30px;display:flex;align-items:center;gap:28px}
+.approach-principle svg{flex:none;color:var(--green)}
+.approach-principle strong{font-family:var(--disp);font-size:17px;display:block;margin-bottom:4px}
+.approach-principle p{color:#B9C9DC;font-size:13.5px}
+@media(max-width:900px){.approach-grid{grid-template-columns:1fr 1fr}.approach-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.approach-card:nth-child(4){border-top:1px solid #DDE6F0}}
+@media(max-width:560px){.approach-grid{grid-template-columns:1fr}.approach-card+.approach-card,.approach-card:nth-child(3){border-left:0;border-top:1px solid #DDE6F0}.approach-card .step{margin-bottom:20px}.approach-principle{align-items:flex-start;padding:24px 22px}}
 
 /* projects */
 .proj{background:var(--navy);color:var(--white)}
@@ -198,23 +281,35 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .c-box{background:var(--panel);border:1px solid rgba(140,163,189,.16);border-radius:12px;padding:34px}
 .c-box h3{font-family:var(--disp);font-size:18px;margin-bottom:10px}
 .c-box p{font-size:14px;color:var(--mist);margin-bottom:24px}
+.brief-list{list-style:none;display:grid;gap:10px;margin:-6px 0 24px}
+.brief-list li{font-size:13.5px;color:#C8D5E4;display:flex;gap:10px;align-items:flex-start}
+.brief-list li::before{content:"✓";color:var(--green);font-weight:700}
 .c-box .btn{width:100%;text-align:center}
 .c-box small{display:block;margin-top:14px;font-size:12px;color:var(--mist);text-align:center}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:40px}}
 
-footer{background:#081120;color:var(--mist);padding:30px 0;font-size:12.5px}
-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C9DC}
+footer{background:#081120;color:var(--mist);padding:44px 0 26px;font-size:12.5px}
+.footer-main{display:flex;justify-content:space-between;gap:40px;padding-bottom:30px;border-bottom:1px solid rgba(140,163,189,.13)}
+.footer-brand b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C9DC;display:block}
+.footer-brand p{max-width:52ch;margin-top:9px;color:#7E93AA}
+.footer-links{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;font-weight:600;color:#AEBED0}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:24px}
+.back-top{color:#AEBED0}
+.back-top:hover{color:var(--green)}
 
 @media(max-width:480px){
   .wrap,.hero-in{padding-left:18px;padding-right:18px}
   .hero{padding-top:136px}
   .hero-in{padding-bottom:64px}
   .hero-cta .btn{width:100%;text-align:center}
+  .hero-trust{display:grid;gap:9px}
   .sec{padding:72px 0}
   .sec-head{margin-bottom:34px}
   .svc-card,.c-box{padding:26px 22px}
-  footer .wrap{display:grid}
+  .footer-main{display:grid;gap:24px}
+  .footer-links{display:grid;grid-template-columns:1fr 1fr}
+  .footer-bottom{display:grid}
 }
 @media(max-width:350px){
   .brand{gap:8px}
@@ -229,6 +324,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 </style>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to main content</a>
 
 <header>
   <div class="wrap nav">
@@ -270,17 +366,22 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <section class="hero">
   <div class="hero-bg" role="img" aria-label="City lights across the Earth seen from space at night"></div>
   <div class="hero-shade"></div>
   <div class="hero-in">
-    <span class="eyebrow">Power Systems Consulting · Since 2004</span>
-    <h1>Power Systems Expertise<br>for the Energy Transition</h1>
-    <p>From coordinated control systems for FACTS devices delivered to KEPCO Research Institute to transmission feasibility studies in Africa and island microgrid design in Asia, Green Net Power has specialized in power systems engineering for more than two decades.</p>
+    <span class="eyebrow">Independent Power Systems Engineering · Since 2004</span>
+    <h1>Rigorous Power System Studies<br>for Confident Grid Decisions</h1>
+    <p>Green Net Power helps utilities, public agencies, project developers, and international partners plan, assess, and advance grid and renewable energy projects—connecting technical analysis with practical options for investment and implementation.</p>
     <div class="hero-cta">
-      <a class="btn btn-solid" href="#contact">Discuss Your Project</a>
-      <a class="btn btn-line" href="#projects">View Track Record</a>
+      <a class="btn btn-solid" href="#contact">Start a Technical Conversation</a>
+      <a class="btn btn-line" href="#projects">Explore Selected Work</a>
+    </div>
+    <div class="hero-trust" aria-label="Why clients engage Green Net Power">
+      <span>Independent engineering perspective</span>
+      <span>Assignments across 5+ countries</span>
+      <span>Studies through implementation support</span>
     </div>
   </div>
   <svg class="oneline" viewBox="0 0 1200 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -304,10 +405,44 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 <section class="stats" aria-label="Key facts">
   <div class="wrap">
     <div class="stats-grid">
-      <div class="stat"><b>2004</b><span>More than two decades<br>of power systems engineering</span></div>
-      <div class="stat"><b>100 MVA</b><span>Coordinated control system for FACTS devices<br>delivered to KEPCO Research Institute and operated on the KEPCO grid</span></div>
-      <div class="stat"><b>5+ Countries</b><span>Mozambique · Ethiopia · Philippines · Oman · Paraguay<br>International grid studies and technical advisory</span></div>
-      <div class="stat"><b>Registered Professional Engineer Office</b><span>KOITA-recognized corporate R&amp;D center · Venture certification<br>Professional engineer-led assignments</span></div>
+      <div class="stat"><b>20+ Years</b><span>Focused on power systems engineering<br>since 2004</span></div>
+      <div class="stat"><b>100 MVA-class</b><span>FACTS coordinated-control R&amp;D<br>delivered to KEPCO Research Institute and operated on the KEPCO grid</span></div>
+      <div class="stat"><b>5+ Countries</b><span>Mozambique · Ethiopia · Philippines · Oman · Paraguay<br>Grid studies and technical advisory</span></div>
+      <div class="stat"><b>Professional Engineer Office</b><span>Registered in Korea<br>KOITA-recognized R&amp;D center · Venture certification</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="audience" id="audience" aria-labelledby="audience-title">
+  <div class="wrap">
+    <div class="audience-head">
+      <div>
+        <span class="eyebrow">Who We Support</span>
+        <h2 id="audience-title">Technical advisory for decisions across the power sector</h2>
+      </div>
+      <p>We work where system performance, investment priorities, and implementation constraints meet.</p>
+    </div>
+    <div class="audience-grid">
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="m7 11 10-5M7 13l10 5"/></svg>
+        <h3>Utilities &amp; Grid Operators</h3>
+        <p>Network planning, reinforcement, operational studies, and control applications</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V10h14v11M3 10h18L12 3zM9 14v3M15 14v3"/></svg>
+        <h3>Governments &amp; Public Agencies</h3>
+        <p>Power-sector planning, feasibility, tariff, and implementation support</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M3 11h18M9 14h6"/></svg>
+        <h3>Developers &amp; Project Owners</h3>
+        <p>Technical feasibility, grid integration, microgrid optimization, and option review</p>
+      </article>
+      <article class="audience-card">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+        <h3>Development Partners &amp; Research Institutions</h3>
+        <p>International programs, applied R&amp;D, training, and laboratory systems</p>
+      </article>
     </div>
   </div>
 </section>
@@ -315,14 +450,17 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 <section class="sec about" id="about">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">About</span>
-      <h2>Power Systems Expertise<br>for Real-World Energy Challenges</h2>
+      <span class="eyebrow">Why Green Net Power</span>
+      <h2>Independent engineering<br>for complex power-system decisions</h2>
     </div>
     <div class="about-grid">
       <div>
-        <p class="lead">Green Net Power is a power systems engineering and consulting firm. Our work spans power flow, short-circuit, and transient stability studies; transmission planning; renewable energy feasibility; microgrid design; and power quality mitigation.</p>
-        <p>Since 2004, we have developed and delivered an automated and coordinated control system for FACTS devices (UPFC) to KEPCO Research Institute, participated in a government-funded R&amp;D program on coordinated STATCOM control, and conducted feasibility studies for 220 kV transmission lines in Mozambique and island microgrids in Ethiopia and the Philippines. More recent assignments cover transmission constraint mitigation in Korea, power system reinforcement advisory in Oman, transmission and substation planning in Paraguay, and an electricity tariff negotiation framework for Ethiopia.</p>
-        <p>Every engagement is grounded in power system studies. We quantify the client’s technical challenge and present practical alternatives supported by engineering data—a principle that has guided our work for more than 20 years.</p>
+        <p class="lead">Green Net Power is an independent power systems engineering consultancy based in Korea. We help clients turn network data, project constraints, and policy objectives into technically sound choices for planning and implementation.</p>
+        <p>Since 2004, our assignments have ranged from FACTS control systems delivered to KEPCO Research Institute and a government-funded STATCOM control program to 220 kV transmission feasibility studies, island microgrids, national grid planning, and electricity tariff advisory. The common thread is disciplined power system analysis applied to a real decision.</p>
+        <div class="about-principle">
+          <b>Working principle</b>
+          <p>We begin with the decision the client needs to make. Assumptions, scenarios, and alternatives are made explicit so technical findings can be understood, challenged, and translated into action.</p>
+        </div>
       </div>
       <div class="side-note">
         <h3>Power System Studies &amp; Design Capabilities</h3>
@@ -345,8 +483,11 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 <section class="sec svc" id="services">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Services</span>
-      <h2>What We Do</h2>
+      <div>
+        <span class="eyebrow">Services</span>
+        <h2>From Grid Questions to Practical Options</h2>
+      </div>
+      <p class="svc-intro">We shape each scope around the client’s decision, the available system data, and the level of detail required—from early feasibility to implementation support.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card">
@@ -391,6 +532,53 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
         </ul>
       </div>
     </div>
+    <div class="deliverables">
+      <div>
+        <span class="label">Typical Deliverables</span>
+        <h3>Clear evidence for the next decision</h3>
+      </div>
+      <p>Defined assumptions and scenarios, reproducible study results, comparison of technical options, and recommendations that identify practical next steps.</p>
+      <a href="#contact">Discuss a Scope →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec approach" id="approach" aria-labelledby="approach-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How We Work</span>
+      <h2 id="approach-title">A clear path from technical question to recommendation</h2>
+      <p class="approach-intro">Every engagement is scaled to the system, available data, stakeholders, and decision timetable.</p>
+    </div>
+    <div class="approach-grid">
+      <article class="approach-card">
+        <span class="step">01</span>
+        <h3>Frame the decision</h3>
+        <p>Confirm the system boundary, decision criteria, available data, interfaces, and target milestone.</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">02</span>
+        <h3>Build and test the case</h3>
+        <p>Establish assumptions and scenarios, then apply the appropriate power system studies and engineering checks.</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">03</span>
+        <h3>Compare practical options</h3>
+        <p>Assess performance, constraints, risks, and implementation trade-offs—not only the preferred technical result.</p>
+      </article>
+      <article class="approach-card">
+        <span class="step">04</span>
+        <h3>Transfer the findings</h3>
+        <p>Deliver a clear report and technical briefing so the client can act on the results and carry the work forward.</p>
+      </article>
+    </div>
+    <div class="approach-principle">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+      <div>
+        <strong>Independent, evidence-led advice</strong>
+        <p>Recommendations are grounded in the client’s system data and the technical question at hand, with assumptions and limitations stated clearly.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -399,7 +587,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     <div class="sec-head">
       <span class="eyebrow" style="color:var(--amber)">Track Record</span>
       <h2>Selected Experience</h2>
-      <p class="proj-sub">Selected assignments delivered for clients in Korea and abroad, from KEPCO R&amp;D systems to national power-sector advisory programs.</p>
+      <p class="proj-sub">A representative set of assignments showing how Green Net Power applies analysis, planning, design, and implementation support to real power-sector challenges.</p>
     </div>
     <div class="proj-grid">
       <article class="p-card">
@@ -488,7 +676,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     </div>
     <div class="hist-grid">
       <ol class="tl">
-        <li><b>2004</b><span>Green Net Power established in Daejeon</span></li>
+        <li><b>20+ Years</b><span>Green Net Power established in Daejeon</span></li>
         <li><b>2005</b><span>Venture business certification and software business registration</span></li>
         <li><b>2006</b><span>Registered a professional engineer office</span></li>
         <li><b>2007</b><span>Corporate R&amp;D center recognized by KOITA; government-funded R&amp;D on coordinated FACTS control launched</span></li>
@@ -500,7 +688,7 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
         <div class="cert-grid">
           <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 8.7l5.4-.8z"/></svg><div><b>Venture Business Certification</b><span>Technology-based venture certification</span></div></div>
           <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9l8-5 8 5v12M9 21v-6h6v6"/></svg><div><b>Corporate R&amp;D Center</b><span>Recognized by KOITA</span></div></div>
-          <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 21c1.2-4 4-6 7-6s5.8 2 7 6"/></svg><div><b>Registered Professional Engineer Office</b><span>Registered under Korea’s Professional Engineers Act</span></div></div>
+          <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 21c1.2-4 4-6 7-6s5.8 2 7 6"/></svg><div><b>Professional Engineer Office</b><span>Registered under Korea’s Professional Engineers Act</span></div></div>
           <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 3 5 13h5l-1 8 8-10h-5z"/></svg><div><b>Energy Audit Qualification</b><span>Industrial energy conservation and efficiency audits</span></div></div>
           <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 7 3 12l5 5M16 7l5 5-5 5"/></svg><div><b>Registered Software Business</b><span>Power system analysis and control software</span></div></div>
           <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.8-5"/></svg><div><b>Registered Trademark</b><span>Green Net Power brand registration</span></div></div>
@@ -514,8 +702,8 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
   <div class="wrap contact-grid">
     <div>
       <span class="eyebrow" style="color:var(--amber)">Contact</span>
-      <h2>Practical Answers<br>Grounded in Power System Studies</h2>
-      <p class="desc">We support projects from the initial technical review, whether the need involves transmission planning, renewable integration, microgrid design, or power quality mitigation.</p>
+      <h2>Bring Us the Decision<br>You Need to Make</h2>
+      <p class="desc">Whether you are planning a network investment, assessing renewable integration, defining a microgrid, or addressing power quality, a focused technical conversation is the best place to start.</p>
       <div class="c-list">
         <div class="c-item"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><b>ADDRESS</b><span>Room 409, AI Center, 272-16 Munji-ro, Yuseong-gu, Daejeon, Republic of Korea</span></div></div>
         <div class="c-item"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b>PHONE</b><span><a href="tel:+821034663726">+82 10-3466-3726</a></span></div></div>
@@ -523,10 +711,15 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
       </div>
     </div>
     <div class="c-box">
-      <h3>Discuss Your Project</h3>
-      <p>Send us a brief description of the site or assets, the required scope, and your target schedule. We will review your inquiry and respond.</p>
-      <a class="btn btn-solid" href="mailto:roundyou@hotmail.com?subject=%5BProject%20Inquiry%5D%20">Email Our Team</a>
-      <small>We will review your inquiry and respond.</small>
+      <h3>Start with a concise project brief</h3>
+      <p>A useful first message includes:</p>
+      <ul class="brief-list">
+        <li>Organization and project location</li>
+        <li>Asset, network, or decision to be assessed</li>
+        <li>Available data and target milestone</li>
+      </ul>
+      <a class="btn btn-solid" href="mailto:roundyou@hotmail.com?subject=%5BProject%20Inquiry%5D%20Organization%20%2F%20Country&amp;body=Organization%3A%0ACountry%20%2F%20project%20location%3A%0AProject%20or%20asset%3A%0ADecision%20%2F%20study%20scope%3A%0AAvailable%20system%20data%3A%0ATarget%20milestone%3A%0A">Send a Project Brief</a>
+      <small>Your inquiry goes directly to Green Net Power’s consulting team.</small>
     </div>
   </div>
 </section>
@@ -534,8 +727,23 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 
 <footer>
   <div class="wrap">
-    <span><b>GREEN NET POWER CO., LTD.</b></span>
-    <span>© 2026 Green Net Power. Room 409, AI Center, 272-16 Munji-ro, Yuseong-gu, Daejeon, Republic of Korea</span>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <b>GREEN NET POWER CO., LTD.</b>
+        <p>Independent power systems engineering for grid planning, renewable integration, and implementation support.</p>
+      </div>
+      <nav class="footer-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Track Record</a>
+        <a href="#history">Credentials</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Green Net Power. Room 409, AI Center, 272-16 Munji-ro, Yuseong-gu, Daejeon, Republic of Korea</span>
+      <a class="back-top" href="#top">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
@@ -543,12 +751,21 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 (() => {
   const menuButton = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector("#mobile-menu");
-  const sectionIds = ["about", "services", "projects", "history", "contact"];
+  const sectionIds = [
+    "audience",
+    "about",
+    "services",
+    "approach",
+    "projects",
+    "history",
+    "contact",
+  ];
+  const navigationIds = ["about", "services", "projects", "history", "contact"];
   const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const sectionLinks = [...document.querySelectorAll('header a[href^="#"]')]
-    .filter((link) => sectionIds.includes(link.hash.slice(1)));
+    .filter((link) => navigationIds.includes(link.hash.slice(1)));
   const supportedHashes = new Set(["#top", ...sectionIds.map((id) => `#${id}`)]);
 
   const setMenuOpen = (open) => {
@@ -603,9 +820,10 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
     }
     if (isPageBottom && sections.length) activeId = sections.at(-1).id;
     activeSectionId = activeId;
+    const navigationId = activeId === "approach" ? "services" : activeId;
 
     sectionLinks.forEach((link) => {
-      if (link.hash === `#${activeId}`) {
+      if (link.hash === `#${navigationId}`) {
         link.setAttribute("aria-current", "location");
       } else {
         link.removeAttribute("aria-current");
@@ -645,6 +863,9 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
       });
       if (window.location.hash !== targetHash) {
         window.history.pushState(null, "", targetHash);
+      }
+      if (link.classList.contains("skip-link")) {
+        target.focus({ preventScroll: true });
       }
     });
   });

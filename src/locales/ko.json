@@ -1,10 +1,10 @@
 {
   "locale": "ko",
   "seo": {
-    "title": "그린넷파워 Green Net Power | 전력계통·신재생에너지 컨설팅",
-    "description": "2004년 설립. 전력계통 해석·송전망 계획·마이크로그리드·전력품질·전기요금 컨설팅 전문 독립 기업. 한전 전력연구원 FACTS 협조제어 시스템 개발·납품, 모잠비크·에티오피아·필리핀·오만·파라과이 전력망 프로젝트 수행.",
-    "ogTitle": "그린넷파워 | 전력계통 컨설팅",
-    "ogDescription": "전력계통 해석으로 에너지전환을 설계합니다 — 계통해석·신재생 F/S·전력품질·전기요금·교육 시스템, Since 2004",
+    "title": "그린넷파워 Green Net Power | 독립 전력계통 엔지니어링·컨설팅",
+    "description": "전력계통 해석, 송전망 계획, 신재생 연계, 마이크로그리드, 전력품질, 전기요금 분야의 독립 엔지니어링·기술자문 기업.",
+    "ogTitle": "그린넷파워 | 독립 전력계통 엔지니어링",
+    "ogDescription": "정밀한 전력계통 해석과 실행 가능한 기술 대안으로 계통·신재생에너지 사업의 의사결정을 지원합니다.",
     "canonical": "https://greennetpower.com/",
     "ogUrl": "https://greennetpower.com/",
     "ogLocale": "ko_KR",
@@ -24,6 +24,9 @@
     "menuOpen": "메뉴 열기",
     "menuClose": "메뉴 닫기"
   },
+  "accessibility": {
+    "skipToContent": "본문으로 바로가기"
+  },
   "brand": {
     "homeLabel": "그린넷파워 홈",
     "name": "그린넷파워",
@@ -42,35 +45,53 @@
   },
   "hero": {
     "imageAlt": "야간 위성에서 본 지구의 도시 불빛",
-    "eyebrow": "Power System Consulting · Since 2004",
-    "titleLine1": "전력계통 해석으로",
-    "titleLine2": "에너지전환을 설계합니다",
-    "description": "한국전력 전력연구원 FACTS 협조제어 시스템 개발·납품부터 아프리카·아시아 전력망 타당성조사, 도서 마이크로그리드 설계까지 — 20년 넘게 전력계통 엔지니어링 한 분야에 집중해 온 독립 컨설팅 기업입니다.",
-    "contactCta": "컨설팅 문의하기",
-    "projectsCta": "주요 실적 보기"
+    "eyebrow": "Independent Power Systems Engineering · Since 2004",
+    "titleLine1": "정밀한 전력계통 해석으로",
+    "titleLine2": "더 나은 계통 의사결정을 만듭니다",
+    "description": "그린넷파워는 전력회사, 공공기관, 사업개발자, 국제협력 파트너가 송전망과 신재생에너지 사업을 계획·검토·추진할 수 있도록 계통 해석 결과를 실행 가능한 기술 대안으로 연결합니다.",
+    "contactCta": "기술 상담 시작하기",
+    "projectsCta": "주요 프로젝트 보기",
+    "trustLabel": "그린넷파워의 업무 강점",
+    "trust1": "독립적 엔지니어링 관점",
+    "trust2": "5개국+ 국제 프로젝트",
+    "trust3": "해석부터 실행 지원까지"
   },
   "stats": {
     "label": "핵심 지표",
-    "foundedValue": "2004",
-    "foundedLine1": "설립 이후 20년 이상",
-    "foundedLine2": "전력계통 엔지니어링 수행",
-    "factsValue": "100MVA",
-    "factsLine1": "급 FACTS 협조제어 시스템 개발",
+    "foundedValue": "20년+",
+    "foundedLine1": "전력계통 엔지니어링 집중",
+    "foundedLine2": "2004년 설립",
+    "factsValue": "100MVA급",
+    "factsLine1": "FACTS 협조제어 연구개발",
     "factsLine2": "한전 전력연구원 납품·실계통 운전",
     "countriesValue": "5개국+",
     "countriesLine1": "모잠비크 · 에티오피아 · 필리핀 · 오만 · 파라과이",
-    "countriesLine2": "해외 전력망 F/S 및 컨설팅",
+    "countriesLine2": "전력망 F/S 및 기술자문",
     "credentialsValue": "기술사사무소",
-    "credentialsLine1": "기업부설연구소 · 벤처기업 인증",
-    "credentialsLine2": "기술사 책임 수행 체제"
+    "credentialsLine1": "대한민국 등록",
+    "credentialsLine2": "기업부설연구소 · 벤처기업 인증"
+  },
+  "audience": {
+    "eyebrow": "Who We Support",
+    "title": "전력산업의 중요한 의사결정을 지원합니다",
+    "intro": "계통 성능, 투자 우선순위, 현장 실행 조건이 만나는 지점에서 기술적 판단 근거를 제공합니다.",
+    "utilitiesTitle": "전력회사·계통운영기관",
+    "utilitiesDescription": "계통계획, 보강 대안, 운영 해석, 제어 응용",
+    "governmentTitle": "정부·공공기관",
+    "governmentDescription": "전력산업 계획, 타당성조사, 요금체계, 사업 실행 지원",
+    "developersTitle": "사업개발자·발주기관",
+    "developersDescription": "기술 타당성, 계통 연계, 마이크로그리드 최적설계, 대안 검토",
+    "partnersTitle": "국제협력기관·연구기관",
+    "partnersDescription": "국제협력 사업, 응용 연구개발, 기술교육, 실험 시스템"
   },
   "about": {
-    "eyebrow": "About",
-    "titleLine1": "전력계통을 아는 회사가",
-    "titleLine2": "에너지 현안을 해결합니다",
-    "lead": "그린넷파워는 조류·고장·안정도 해석 등 전력계통 해석 기술을 기반으로, 송전망 계획 검토부터 신재생에너지 타당성조사, 마이크로그리드 설계, 전력품질 대책 수립까지 수행하는 전력계통 전문 엔지니어링·컨설팅 기업입니다.",
-    "history": "2004년 설립 이래 한국전력 전력연구원의 FACTS(UPFC) 자동·협조제어 시스템을 개발해 납품했고, STATCOM 협조제어 국책과제를 수행했으며, 모잠비크 220kV 송전선로와 에티오피아·필리핀 도서 마이크로그리드의 타당성조사를 수행했습니다. 최근에는 동해안 송전제약 해소방안, 오만·파라과이 국가 전력계통 컨설팅, 에티오피아 전기요금 협상 프레임워크 개발까지 국내외 계통 현안의 해법을 제시하고 있습니다.",
-    "principle": "모든 검토는 계통 해석 데이터에 근거합니다. 발주처의 현안을 정량적으로 진단하고 실행 가능한 대안을 수치로 제시하는 것이 20년간 지켜 온 원칙입니다.",
+    "eyebrow": "Why Green Net Power",
+    "titleLine1": "복잡한 전력계통 의사결정을 위한",
+    "titleLine2": "독립적 엔지니어링",
+    "lead": "그린넷파워는 대한민국에 기반을 둔 독립 전력계통 엔지니어링·컨설팅 기업입니다. 계통 데이터, 사업 제약조건, 정책 목표를 기술적으로 타당한 계획·실행 대안으로 전환합니다.",
+    "history": "2004년 설립 이후 한국전력 전력연구원 FACTS 제어 시스템과 STATCOM 협조제어 국책과제부터 220kV 송전망 타당성조사, 도서 마이크로그리드, 국가 전력계통 계획, 전기요금 자문까지 수행해 왔습니다. 서로 다른 과제들을 연결하는 공통점은 실제 의사결정에 적용되는 정밀한 계통 해석입니다.",
+    "principleLabel": "업무 원칙",
+    "principle": "고객이 내려야 할 의사결정을 먼저 명확히 정의합니다. 전제조건, 시나리오, 대안을 투명하게 제시해 분석 결과가 실제 사업·운영 판단으로 이어지게 합니다.",
     "capabilities": "해석·설계 수행 역량"
   },
   "chips": {
@@ -95,7 +116,8 @@
   },
   "services": {
     "eyebrow": "Services",
-    "title": "사업분야",
+    "title": "계통 현안을 실행 가능한 대안으로",
+    "intro": "초기 타당성 검토부터 실행 지원까지, 고객의 의사결정과 가용 데이터, 필요한 분석 수준에 맞춰 과업 범위를 설계합니다.",
     "powerTitle": "전력계통 해석·계획·시장",
     "powerDescription": "국가 단위 전력계통 컨설팅과 송전망 계획의 기술 타당성을 해석 데이터로 검증합니다.",
     "powerItem1": "송전선로 건설계획 F/S · 공용성 검토",
@@ -116,12 +138,31 @@
     "trainingDescription": "전력계통과 신재생 전력망을 축소 구현한 실험장치를 개발·공급하고 위탁교육을 제공합니다.",
     "trainingItem1": "마이크로그리드 설계·운전 실험장치",
     "trainingItem2": "계통운용 · SCADA/EMS · FACTS 실습 시스템",
-    "trainingItem3": "대학·기술연수원 교육 기자재"
+    "trainingItem3": "대학·기술연수원 교육 기자재",
+    "deliverablesLabel": "주요 결과물",
+    "deliverablesTitle": "다음 의사결정을 위한 명확한 근거",
+    "deliverablesDescription": "분석 전제와 시나리오, 재현 가능한 해석 결과, 기술 대안 비교, 실행 단계가 드러나는 권고안을 제공합니다.",
+    "deliverablesCta": "과업 범위 상담"
+  },
+  "approach": {
+    "eyebrow": "How We Work",
+    "title": "기술 현안에서 실행 가능한 권고안까지",
+    "intro": "대상 계통, 가용 데이터, 이해관계자, 의사결정 일정에 맞춰 각 과업의 깊이와 방법을 조정합니다.",
+    "step1Title": "의사결정 정의",
+    "step1Description": "계통 범위, 판단 기준, 가용 데이터, 연계 조건, 목표 일정을 확인합니다.",
+    "step2Title": "모델링·시나리오 해석",
+    "step2Description": "전제조건과 시나리오를 수립하고 목적에 맞는 계통 해석과 엔지니어링 검토를 수행합니다.",
+    "step3Title": "실행 대안 비교",
+    "step3Description": "계통 성능, 제약조건, 위험요소, 실행상 상충관계를 비교해 현실적인 대안을 도출합니다.",
+    "step4Title": "결과 공유·이행 지원",
+    "step4Description": "명확한 보고서와 기술 브리핑으로 고객이 결과를 활용하고 다음 단계를 추진할 수 있게 합니다.",
+    "principleTitle": "독립적이고 근거 중심의 자문",
+    "principleDescription": "고객의 계통 데이터와 실제 기술 현안을 바탕으로 검토하며, 주요 전제와 한계를 명확히 제시합니다."
   },
   "projects": {
     "eyebrow": "Track Record",
     "title": "주요 실적",
-    "intro": "한전 R&D 납품부터 국가 전력계통 컨설팅까지, 국내외 발주처와 수행한 주요 실적입니다.",
+    "intro": "계통 해석, 계획, 설계, 실행 지원이 실제 전력산업 현안에 어떻게 적용됐는지 보여주는 대표 과제입니다.",
     "paraguayMeta": "2025–2026 · KOTRA",
     "paraguayTitle": "파라과이 국가 송·변전 계획 컨설팅",
     "paraguayDescription": "파라과이 국가 송·변전 설비계획 컨설팅. 계통해석과 발전·송배전 계획, 수요예측 검토를 거쳐 경제성 기반의 최적 대안을 제시.",
@@ -206,9 +247,9 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "titleLine1": "계통 현안에 대한 답,",
-    "titleLine2": "해석 데이터로 제시합니다",
-    "description": "송전망 검토, 신재생 연계, 마이크로그리드 설계, 전력품질 대책 — 과업 규모와 관계없이 기술 검토 단계부터 상담해 드립니다.",
+    "titleLine1": "검토해야 할 계통 현안을",
+    "titleLine2": "알려주세요",
+    "description": "송전망 투자, 신재생 연계, 마이크로그리드 구성, 전력품질 대책 등 필요한 의사결정을 중심으로 기술 검토를 시작합니다.",
     "addressLabel": "ADDRESS",
     "address": "대전광역시 유성구 문지로 272-16, AI센터 409호",
     "phoneLabel": "PHONE",
@@ -216,10 +257,17 @@
     "phoneHref": "tel:01034663726",
     "emailLabel": "EMAIL",
     "email": "roundyou@hotmail.com",
-    "boxTitle": "컨설팅 문의",
-    "boxDescription": "과업 내용(대상 설비·지역, 필요한 검토 범위, 희망 일정)을 간단히 적어 보내주시면 검토 후 회신드립니다.",
-    "emailCta": "이메일로 문의하기",
-    "responseNote": "과업 검토 후 회신드립니다.",
-    "emailHref": "mailto:roundyou@hotmail.com?subject=%5B%EC%BB%A8%EC%84%A4%ED%8C%85%20%EB%AC%B8%EC%9D%98%5D%20"
+    "boxTitle": "간단한 프로젝트 개요로 시작하세요",
+    "boxDescription": "첫 문의에 아래 내용을 포함하면 검토에 도움이 됩니다.",
+    "brief1": "기관명과 프로젝트 위치",
+    "brief2": "검토 대상 설비·계통 또는 의사결정",
+    "brief3": "가용 데이터와 목표 일정",
+    "emailCta": "프로젝트 개요 보내기",
+    "responseNote": "문의는 그린넷파워 컨설팅 담당자에게 직접 전달됩니다.",
+    "emailHref": "mailto:roundyou@hotmail.com?subject=%5B%EA%B8%B0%EC%88%A0%20%EC%BB%A8%EC%84%A4%ED%8C%85%20%EB%AC%B8%EC%9D%98%5D%20%EA%B8%B0%EA%B4%80%EB%AA%85%20%2F%20%EA%B5%AD%EA%B0%80&body=%EA%B8%B0%EA%B4%80%EB%AA%85%3A%0A%EA%B5%AD%EA%B0%80%20%2F%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%9C%84%EC%B9%98%3A%0A%EB%8C%80%EC%83%81%20%EC%84%A4%EB%B9%84%20%EB%98%90%EB%8A%94%20%EA%B3%84%ED%86%B5%3A%0A%ED%95%84%EC%9A%94%ED%95%9C%20%EA%B2%80%ED%86%A0%20%EB%B2%94%EC%9C%84%3A%0A%EA%B0%80%EC%9A%A9%20%EB%8D%B0%EC%9D%B4%ED%84%B0%3A%0A%EB%AA%A9%ED%91%9C%20%EC%9D%BC%EC%A0%95%3A%0A"
+  },
+  "footer": {
+    "tagline": "계통계획, 신재생 연계, 실행 지원을 위한 독립 전력계통 엔지니어링.",
+    "backToTop": "맨 위로"
   }
 }

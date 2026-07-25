@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "seo": {
-    "title": "Green Net Power | Power Systems & Renewable Energy Consulting",
-    "description": "Independent power systems consultancy established in 2004, providing power system studies, transmission planning, renewable integration, microgrid, power quality, and electricity tariff advisory services.",
-    "ogTitle": "Green Net Power | Power Systems Engineering & Advisory",
-    "ogDescription": "Independent engineering advisory for power system studies, transmission planning, renewable integration, microgrids, power quality, and electricity tariffs.",
+    "title": "Green Net Power | Independent Power Systems Engineering & Advisory",
+    "description": "Independent consultancy for power system studies, transmission planning, renewable integration, microgrids, power quality, and electricity tariff advisory.",
+    "ogTitle": "Green Net Power | Independent Power Systems Engineering",
+    "ogDescription": "Rigorous power system studies and practical engineering advice for confident grid, renewable energy, and infrastructure decisions.",
     "canonical": "https://greennetpower.com/en/",
     "ogUrl": "https://greennetpower.com/en/",
     "ogLocale": "en_US",
@@ -24,6 +24,9 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
   },
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
   "brand": {
     "homeLabel": "Green Net Power home",
     "name": "Green Net Power",
@@ -42,35 +45,53 @@
   },
   "hero": {
     "imageAlt": "City lights across the Earth seen from space at night",
-    "eyebrow": "Power Systems Consulting · Since 2004",
-    "titleLine1": "Power Systems Expertise",
-    "titleLine2": "for the Energy Transition",
-    "description": "From coordinated control systems for FACTS devices delivered to KEPCO Research Institute to transmission feasibility studies in Africa and island microgrid design in Asia, Green Net Power has specialized in power systems engineering for more than two decades.",
-    "contactCta": "Discuss Your Project",
-    "projectsCta": "View Track Record"
+    "eyebrow": "Independent Power Systems Engineering · Since 2004",
+    "titleLine1": "Rigorous Power System Studies",
+    "titleLine2": "for Confident Grid Decisions",
+    "description": "Green Net Power helps utilities, public agencies, project developers, and international partners plan, assess, and advance grid and renewable energy projects—connecting technical analysis with practical options for investment and implementation.",
+    "contactCta": "Start a Technical Conversation",
+    "projectsCta": "Explore Selected Work",
+    "trustLabel": "Why clients engage Green Net Power",
+    "trust1": "Independent engineering perspective",
+    "trust2": "Assignments across 5+ countries",
+    "trust3": "Studies through implementation support"
   },
   "stats": {
     "label": "Key facts",
-    "foundedValue": "2004",
-    "foundedLine1": "More than two decades",
-    "foundedLine2": "of power systems engineering",
-    "factsValue": "100 MVA",
-    "factsLine1": "Coordinated control system for FACTS devices",
+    "foundedValue": "20+ Years",
+    "foundedLine1": "Focused on power systems engineering",
+    "foundedLine2": "since 2004",
+    "factsValue": "100 MVA-class",
+    "factsLine1": "FACTS coordinated-control R&D",
     "factsLine2": "delivered to KEPCO Research Institute and operated on the KEPCO grid",
     "countriesValue": "5+ Countries",
     "countriesLine1": "Mozambique · Ethiopia · Philippines · Oman · Paraguay",
-    "countriesLine2": "International grid studies and technical advisory",
-    "credentialsValue": "Registered Professional Engineer Office",
-    "credentialsLine1": "KOITA-recognized corporate R&D center · Venture certification",
-    "credentialsLine2": "Professional engineer-led assignments"
+    "countriesLine2": "Grid studies and technical advisory",
+    "credentialsValue": "Professional Engineer Office",
+    "credentialsLine1": "Registered in Korea",
+    "credentialsLine2": "KOITA-recognized R&D center · Venture certification"
+  },
+  "audience": {
+    "eyebrow": "Who We Support",
+    "title": "Technical advisory for decisions across the power sector",
+    "intro": "We work where system performance, investment priorities, and implementation constraints meet.",
+    "utilitiesTitle": "Utilities & Grid Operators",
+    "utilitiesDescription": "Network planning, reinforcement, operational studies, and control applications",
+    "governmentTitle": "Governments & Public Agencies",
+    "governmentDescription": "Power-sector planning, feasibility, tariff, and implementation support",
+    "developersTitle": "Developers & Project Owners",
+    "developersDescription": "Technical feasibility, grid integration, microgrid optimization, and option review",
+    "partnersTitle": "Development Partners & Research Institutions",
+    "partnersDescription": "International programs, applied R&D, training, and laboratory systems"
   },
   "about": {
-    "eyebrow": "About",
-    "titleLine1": "Power Systems Expertise",
-    "titleLine2": "for Real-World Energy Challenges",
-    "lead": "Green Net Power is a power systems engineering and consulting firm. Our work spans power flow, short-circuit, and transient stability studies; transmission planning; renewable energy feasibility; microgrid design; and power quality mitigation.",
-    "history": "Since 2004, we have developed and delivered an automated and coordinated control system for FACTS devices (UPFC) to KEPCO Research Institute, participated in a government-funded R&D program on coordinated STATCOM control, and conducted feasibility studies for 220 kV transmission lines in Mozambique and island microgrids in Ethiopia and the Philippines. More recent assignments cover transmission constraint mitigation in Korea, power system reinforcement advisory in Oman, transmission and substation planning in Paraguay, and an electricity tariff negotiation framework for Ethiopia.",
-    "principle": "Every engagement is grounded in power system studies. We quantify the client’s technical challenge and present practical alternatives supported by engineering data—a principle that has guided our work for more than 20 years.",
+    "eyebrow": "Why Green Net Power",
+    "titleLine1": "Independent engineering",
+    "titleLine2": "for complex power-system decisions",
+    "lead": "Green Net Power is an independent power systems engineering consultancy based in Korea. We help clients turn network data, project constraints, and policy objectives into technically sound choices for planning and implementation.",
+    "history": "Since 2004, our assignments have ranged from FACTS control systems delivered to KEPCO Research Institute and a government-funded STATCOM control program to 220 kV transmission feasibility studies, island microgrids, national grid planning, and electricity tariff advisory. The common thread is disciplined power system analysis applied to a real decision.",
+    "principleLabel": "Working principle",
+    "principle": "We begin with the decision the client needs to make. Assumptions, scenarios, and alternatives are made explicit so technical findings can be understood, challenged, and translated into action.",
     "capabilities": "Power System Studies & Design Capabilities"
   },
   "chips": {
@@ -95,7 +116,8 @@
   },
   "services": {
     "eyebrow": "Services",
-    "title": "What We Do",
+    "title": "From Grid Questions to Practical Options",
+    "intro": "We shape each scope around the client’s decision, the available system data, and the level of detail required—from early feasibility to implementation support.",
     "powerTitle": "Power System Studies, Grid Planning & Markets",
     "powerDescription": "We apply power system studies to national grid planning, transmission investment decisions, and electricity market advisory assignments.",
     "powerItem1": "Transmission feasibility studies and assessments of shared network use",
@@ -116,12 +138,31 @@
     "trainingDescription": "We develop scaled laboratory systems for power networks and renewable energy applications and provide client-specific technical training.",
     "trainingItem1": "Microgrid design and operation laboratory platforms",
     "trainingItem2": "Grid operation, SCADA/EMS, and FACTS training systems",
-    "trainingItem3": "Laboratory equipment for universities and technical training institutes"
+    "trainingItem3": "Laboratory equipment for universities and technical training institutes",
+    "deliverablesLabel": "Typical Deliverables",
+    "deliverablesTitle": "Clear evidence for the next decision",
+    "deliverablesDescription": "Defined assumptions and scenarios, reproducible study results, comparison of technical options, and recommendations that identify practical next steps.",
+    "deliverablesCta": "Discuss a Scope"
+  },
+  "approach": {
+    "eyebrow": "How We Work",
+    "title": "A clear path from technical question to recommendation",
+    "intro": "Every engagement is scaled to the system, available data, stakeholders, and decision timetable.",
+    "step1Title": "Frame the decision",
+    "step1Description": "Confirm the system boundary, decision criteria, available data, interfaces, and target milestone.",
+    "step2Title": "Build and test the case",
+    "step2Description": "Establish assumptions and scenarios, then apply the appropriate power system studies and engineering checks.",
+    "step3Title": "Compare practical options",
+    "step3Description": "Assess performance, constraints, risks, and implementation trade-offs—not only the preferred technical result.",
+    "step4Title": "Transfer the findings",
+    "step4Description": "Deliver a clear report and technical briefing so the client can act on the results and carry the work forward.",
+    "principleTitle": "Independent, evidence-led advice",
+    "principleDescription": "Recommendations are grounded in the client’s system data and the technical question at hand, with assumptions and limitations stated clearly."
   },
   "projects": {
     "eyebrow": "Track Record",
     "title": "Selected Experience",
-    "intro": "Selected assignments delivered for clients in Korea and abroad, from KEPCO R&D systems to national power-sector advisory programs.",
+    "intro": "A representative set of assignments showing how Green Net Power applies analysis, planning, design, and implementation support to real power-sector challenges.",
     "paraguayMeta": "2025–2026 · KOTRA",
     "paraguayTitle": "Paraguay National Transmission & Substation Planning",
     "paraguayDescription": "Technical advisory supporting Paraguay’s national transmission and substation planning, covering power system studies, generation and network development plans, and demand forecasts to identify cost-effective options.",
@@ -206,9 +247,9 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "titleLine1": "Practical Answers",
-    "titleLine2": "Grounded in Power System Studies",
-    "description": "We support projects from the initial technical review, whether the need involves transmission planning, renewable integration, microgrid design, or power quality mitigation.",
+    "titleLine1": "Bring Us the Decision",
+    "titleLine2": "You Need to Make",
+    "description": "Whether you are planning a network investment, assessing renewable integration, defining a microgrid, or addressing power quality, a focused technical conversation is the best place to start.",
     "addressLabel": "ADDRESS",
     "address": "Room 409, AI Center, 272-16 Munji-ro, Yuseong-gu, Daejeon, Republic of Korea",
     "phoneLabel": "PHONE",
@@ -216,10 +257,17 @@
     "phoneHref": "tel:+821034663726",
     "emailLabel": "EMAIL",
     "email": "roundyou@hotmail.com",
-    "boxTitle": "Discuss Your Project",
-    "boxDescription": "Send us a brief description of the site or assets, the required scope, and your target schedule. We will review your inquiry and respond.",
-    "emailCta": "Email Our Team",
-    "responseNote": "We will review your inquiry and respond.",
-    "emailHref": "mailto:roundyou@hotmail.com?subject=%5BProject%20Inquiry%5D%20"
+    "boxTitle": "Start with a concise project brief",
+    "boxDescription": "A useful first message includes:",
+    "brief1": "Organization and project location",
+    "brief2": "Asset, network, or decision to be assessed",
+    "brief3": "Available data and target milestone",
+    "emailCta": "Send a Project Brief",
+    "responseNote": "Your inquiry goes directly to Green Net Power’s consulting team.",
+    "emailHref": "mailto:roundyou@hotmail.com?subject=%5BProject%20Inquiry%5D%20Organization%20%2F%20Country&body=Organization%3A%0ACountry%20%2F%20project%20location%3A%0AProject%20or%20asset%3A%0ADecision%20%2F%20study%20scope%3A%0AAvailable%20system%20data%3A%0ATarget%20milestone%3A%0A"
+  },
+  "footer": {
+    "tagline": "Independent power systems engineering for grid planning, renewable integration, and implementation support.",
+    "backToTop": "Back to top"
   }
 }
