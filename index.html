@@ -3,13 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>그린넷파워 GreenNetPower | 전력계통·신재생에너지 컨설팅</title>
+<title>그린넷파워 Green Net Power | 전력계통·신재생에너지 컨설팅</title>
 <meta name="description" content="2004년 설립. 전력계통 해석·송전망 계획·마이크로그리드·전력품질·전기요금 컨설팅 전문 독립 기업. 한전 전력연구원 FACTS 협조제어 시스템 개발·납품, 모잠비크·에티오피아·필리핀·오만·파라과이 전력망 프로젝트 수행.">
 <meta property="og:title" content="그린넷파워 | 전력계통 컨설팅">
 <meta property="og:description" content="전력계통 해석으로 에너지전환을 설계합니다 — 계통해석·신재생 F/S·전력품질·전기요금·교육 시스템, Since 2004">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://greennetpower.com/">
 <link rel="canonical" href="https://greennetpower.com/">
+<link rel="alternate" hreflang="ko" href="https://greennetpower.com/">
+<link rel="alternate" hreflang="en" href="https://greennetpower.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://greennetpower.com/">
+<meta property="og:site_name" content="Green Net Power">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://greennetpower.com/assets/og-image.jpg">
+<meta property="og:image:alt" content="그린넷파워 전력계통 컨설팅">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="그린넷파워 | 전력계통 컨설팅">
+<meta name="twitter:description" content="전력계통 해석으로 에너지전환을 설계합니다 — 계통해석·신재생 F/S·전력품질·전기요금·교육 시스템, Since 2004">
+<meta name="twitter:image" content="https://greennetpower.com/assets/og-image.jpg">
+<meta name="theme-color" content="#0A1628">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%232BB673' stroke-width='3'/%3E%3Cpath d='M17.5 7 11 18h4.5L14 25l7-11h-4.5z' fill='%232BB673'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +42,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+html[lang="ko"] body{word-break:keep-all}
+html[lang="en"] body{line-height:1.65}
+.hero h1,.sec-head h2,.svc-card h3,.p-card h3,.contact h2,.tl span,.cert span{overflow-wrap:anywhere}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
@@ -40,12 +56,26 @@ a{color:inherit;text-decoration:none}
 
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(140,163,189,.14)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--white)}
 .brand svg{flex:none}
 .brand b{font-family:var(--disp);font-weight:700;font-size:16px;letter-spacing:.02em}
 .brand span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--mist);display:block;margin-top:1px}
-.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links{display:flex;gap:clamp(16px,2vw,28px);align-items:center;margin-left:auto}
+.nav-links a{white-space:nowrap}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.lang-switch{display:flex;align-items:center;gap:7px;color:var(--mist);font-family:var(--mono);font-size:12px;line-height:1}
+.lang-switch a{min-width:28px;min-height:32px;display:grid;place-items:center;border-radius:4px;transition:color .15s,background .15s}
+.lang-switch a:hover{color:var(--white);background:rgba(255,255,255,.06)}
+.lang-switch a.is-active{color:var(--amber);font-weight:500}
+.lang-switch span{opacity:.45}
+.menu-toggle{display:none;width:44px;height:44px;border:1px solid rgba(140,163,189,.35);border-radius:7px;background:transparent;color:var(--white);padding:10px;cursor:pointer}
+.menu-toggle span{display:block;width:100%;height:2px;background:currentColor;border-radius:2px;transition:transform .18s,opacity .18s}
+.menu-toggle span+span{margin-top:5px}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
 .nav-links a{color:var(--mist);font-size:14px;font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--white)}
 .btn{display:inline-block;font-family:var(--disp);font-weight:600;font-size:14px;padding:11px 22px;border-radius:6px;transition:transform .15s,background .15s,box-shadow .15s}
@@ -53,7 +83,18 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,22,40,.82);
 .btn-solid:hover{background:#37C983;transform:translateY(-1px)}
 .btn-line{border:1px solid var(--line);color:var(--white)}
 .btn-line:hover{border-color:var(--mist)}
-@media(max-width:860px){.nav-links a:not(.btn){display:none}}
+@media(max-width:1020px){.nav-links{gap:14px}.nav-links a{font-size:13px}.nav-links .btn{padding-inline:16px}}
+@media(max-width:900px){
+  .nav-links,.desktop-lang{display:none}
+  .menu-toggle{display:block}
+  .mobile-menu{position:absolute;inset:64px 0 auto;background:rgba(10,22,40,.98);border-top:1px solid rgba(140,163,189,.14);border-bottom:1px solid rgba(140,163,189,.2);box-shadow:0 18px 30px rgba(3,10,20,.28)}
+  .mobile-menu[hidden]{display:none}
+  .mobile-menu:not([hidden]){display:block}
+  .mobile-menu nav{display:grid;padding-top:16px;padding-bottom:22px}
+  .mobile-menu nav>a{color:var(--white);font-family:var(--disp);font-size:16px;font-weight:600;padding:12px 4px;border-bottom:1px solid rgba(140,163,189,.13)}
+  .mobile-lang{margin-top:14px}
+  .mobile-lang a{min-width:44px;min-height:44px}
+}
 
 /* hero */
 .hero{position:relative;background:var(--navy);color:var(--white);padding:170px 0 0;overflow:hidden}
@@ -160,6 +201,22 @@ footer{background:#081120;color:var(--mist);padding:30px 0;font-size:12.5px}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C9DC}
 
+@media(max-width:480px){
+  .wrap,.hero-in{padding-left:18px;padding-right:18px}
+  .hero{padding-top:136px}
+  .hero-in{padding-bottom:64px}
+  .hero-cta .btn{width:100%;text-align:center}
+  .sec{padding:72px 0}
+  .sec-head{margin-bottom:34px}
+  .svc-card,.c-box{padding:26px 22px}
+  footer .wrap{display:grid}
+}
+@media(max-width:350px){
+  .brand{gap:8px}
+  .brand b{font-size:14px}
+  .brand span{font-size:9px;letter-spacing:.12em}
+}
+
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
@@ -180,6 +237,30 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
       <a href="#projects">주요실적</a>
       <a href="#history">연혁·인증</a>
       <a class="btn btn-solid" href="#contact">컨설팅 문의</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch desktop-lang" aria-label="언어 선택">
+        <a class="lang-link is-active" href="./" data-lang="ko" lang="ko" hreflang="ko" aria-current="page">KO</a>
+        <span aria-hidden="true">|</span>
+        <a class="lang-link " href="en/" data-lang="en" lang="en" hreflang="en" aria-current="false">EN</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기" data-open-label="메뉴 열기" data-close-label="메뉴 닫기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="wrap" aria-label="모바일 메뉴">
+      <a href="#about">회사소개</a>
+      <a href="#services">사업분야</a>
+      <a href="#projects">주요실적</a>
+      <a href="#history">연혁·인증</a>
+      <a href="#contact">컨설팅 문의</a>
+      <div class="lang-switch mobile-lang" aria-label="언어 선택">
+        <a class="lang-link is-active" href="./" data-lang="ko" lang="ko" hreflang="ko" aria-current="page">KO</a>
+        <span aria-hidden="true">|</span>
+        <a class="lang-link " href="en/" data-lang="en" lang="en" hreflang="en" aria-current="false">EN</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -448,10 +529,61 @@ footer b{font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:#B9C
 
 <footer>
   <div class="wrap">
-    <span><b>GREEN NET POWER CO., LTD.</b> · 그린넷파워</span>
+    <span><b>GREEN NET POWER CO., LTD. · 그린넷파워</b></span>
     <span>© 2026 Green Net Power. 대전광역시 유성구 문지로 272-16, AI센터 409호</span>
   </div>
 </footer>
+
+<script>
+(() => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+
+  const setMenuOpen = (open) => {
+    if (!menuButton || !mobileMenu) return;
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute(
+      "aria-label",
+      open ? menuButton.dataset.closeLabel : menuButton.dataset.openLabel,
+    );
+    mobileMenu.hidden = !open;
+  };
+
+  menuButton?.addEventListener("click", () => {
+    setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+  });
+
+  mobileMenu?.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenuOpen(false);
+      menuButton?.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMenuOpen(false);
+  });
+
+  document.querySelectorAll(".lang-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      try {
+        localStorage.setItem("gnp-language", link.dataset.lang);
+      } catch {
+        // Language switching still works when storage is unavailable.
+      }
+      if (window.location.hash) {
+        const destination = new URL(link.href, window.location.href);
+        destination.hash = window.location.hash;
+        link.href = destination.href;
+      }
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
