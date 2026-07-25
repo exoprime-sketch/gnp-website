@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0A1628">
+<title>페이지를 찾을 수 없습니다 | Green Net Power</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%232BB673' stroke-width='3'/%3E%3Cpath d='M17.5 7 11 18h4.5L14 25l7-11h-4.5z' fill='%232BB673'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#0A1628;--panel:#101F35;--line:#24405F;--green:#2BB673;--amber:#F0B54A;--white:#F2F6FA;--mist:#B9C9DC}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--navy);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;padding:24px}
+main{width:min(640px,100%);background:var(--panel);border:1px solid rgba(140,163,189,.2);border-radius:14px;padding:clamp(30px,7vw,58px);box-shadow:0 24px 60px rgba(0,0,0,.22)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-weight:700}
+.mark{width:28px;height:28px;border:2px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green)}
+.code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--amber);letter-spacing:.18em;margin:42px 0 10px}
+h1{font-size:clamp(28px,7vw,42px);line-height:1.2;margin:0}
+p{color:var(--mist);line-height:1.7;margin:18px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 20px;border-radius:7px;text-decoration:none;font-weight:700}
+.primary{background:var(--green);color:#04120B}
+.secondary{border:1px solid var(--line);color:var(--white)}
+[hidden]{display:none!important}
+@media(max-width:420px){.button{width:100%}}
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="/" aria-label="Green Net Power home">
+    <span class="mark" aria-hidden="true">ϟ</span>
+    <span>Green Net Power</span>
+  </a>
+  <section data-locale="ko">
+    <div class="code">ERROR 404</div>
+    <h1>페이지를 찾을 수 없습니다</h1>
+    <p>주소가 변경되었거나 존재하지 않는 페이지입니다. 그린넷파워 한국어 홈페이지에서 필요한 내용을 확인해 주세요.</p>
+    <div class="actions">
+      <a class="button primary" href="/">한국어 홈으로</a>
+      <a class="button secondary" href="/en/">English Site</a>
+    </div>
+  </section>
+  <section data-locale="en" lang="en" hidden>
+    <div class="code">ERROR 404</div>
+    <h1>Page Not Found</h1>
+    <p>The address may have changed, or the page may no longer exist. Continue to the Green Net Power English website.</p>
+    <div class="actions">
+      <a class="button primary" href="/en/">Go to English Home</a>
+      <a class="button secondary" href="/">한국어 사이트</a>
+    </div>
+  </section>
+</main>
+<script>
+(() => {
+  const useEnglish = window.location.pathname.startsWith("/en/");
+  const locale = useEnglish ? "en" : "ko";
+  document.documentElement.lang = locale;
+  document.title = useEnglish
+    ? "Page Not Found | Green Net Power"
+    : "페이지를 찾을 수 없습니다 | Green Net Power";
+  document.querySelectorAll("[data-locale]").forEach((panel) => {
+    panel.hidden = panel.dataset.locale !== locale;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "green-net-power-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static bilingual website for Green Net Power",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
